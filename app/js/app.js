@@ -6,6 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		slidesPerView: 1.1,
 		//spaceBetween: 100,
 		loop: true,
+		//autoplay: {
+		//	delay: 5000,
+		//},
+		on: {
+			slideChangeTransitionStart: function () {
+				bannerText();
+			},
+		},
 		pagination: {
 			el: '.swiper-pagination',
 			type: 'bullets',
@@ -15,6 +23,19 @@ document.addEventListener("DOMContentLoaded", function () {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+		}
 	})
 
 });
+
+bannerText();
+function bannerText() {
+	var id = $('.first-section .swiper-slide-active').data("id");
+	$('.first-section__headline-title').fadeOut().promise().done(function () {
+		$('.first-section__headline-title[data-id=' + id + ']').fadeIn();
+	});
+}

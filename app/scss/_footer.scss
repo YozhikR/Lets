@@ -31,15 +31,24 @@
 	&__lists {
 		display: flex;
 		width: 70%;
+		padding-left: 2.7em;
 		ul {
 			list-style-type: none;
 			display: grid;
+			grid-column-gap: 2em;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-template-rows: auto;
+			grid-template-areas:
+				"f1 f5 f8"
+				"f2 f6 f9"
+				"f3 f7 f10"
+				"f4 . .";
 			&:not(:last-child) {
 				margin-right: 2.5em;
 			}
 			li {
 				&:not(:last-child) {
-					margin-bottom: 0.5em;
+					margin-bottom: 0.3em;
 				}
 				a {
 					color: #000;
@@ -48,6 +57,58 @@
 					&:hover {
 						color: $blue;
 						text-decoration: underline;
+					}
+				}
+				&:nth-child(1) {
+					grid-area: f1;
+				}
+				&:nth-child(2) {
+					grid-area: f2;
+					margin-top: -1em;
+				}
+				&:nth-child(3) {
+					grid-area: f3;
+					margin-top: -1.9em;
+				}
+				&:nth-child(4) {
+					grid-area: f4;
+					margin-top: -1.5em;
+				}
+				&:nth-child(5) {
+					grid-area: f5;
+				}
+				&:nth-child(6) {
+					grid-area: f6;
+				}
+				&:nth-child(7) {
+					grid-area: f7;
+				}
+				&:nth-child(8) {
+					grid-area: f8;
+				}
+				&:nth-child(9) {
+					grid-area: f9;
+				}
+				&:nth-child(10) {
+					grid-area: f10;
+					margin-top: -1.1em;
+				}
+			}
+			@media (max-width: 1025px) {
+				grid-template-columns: 1fr 1fr;
+				grid-column-gap: 1em;
+				grid-template-areas:
+					"f1 f6 "
+					"f2 f8"
+					"f3 f9"
+					"f4 f10"
+					"f5 f7";
+				li {
+					margin-top: 0 !important;
+					a {
+						br {
+							display: none;
+						}
 					}
 				}
 			}
@@ -192,6 +253,14 @@
 				height: 2.5em;
 				width: 13em;
 			}
+		}
+	}
+	@media (max-width: 568px) {
+		&-wrap {
+			padding: 0;
+		}
+		&__lists {
+			padding: 3.3em 0 2.3em;
 		}
 	}
 }
