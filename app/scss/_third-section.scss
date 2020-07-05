@@ -1,0 +1,294 @@
+.third-section {
+	background-color: #fff;
+	padding: 5em 0;
+	&__title {
+		margin-bottom: 4em;
+		h2 {
+			font-size: 2.25em;
+			text-align: center;
+		}
+	}
+}
+
+.trio-swiper-container {
+	width: 100%;
+	height: 100%;
+}
+
+.trio-slide__block {
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	min-height: 30em;
+	&-anime {
+		height: 100%;
+		.trio-slide__img {
+			position: absolute;
+			top: 0;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+		.anime-block {
+			margin: 0 auto;
+			position: relative;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+	}
+
+	&.block-anime1 {
+		.anime-block {
+			margin-top: 2em;
+			width: 20.75em;
+			height: 20.75em;
+			//background-color: $orange;
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				border-radius: 50%;
+				border: 0.1875em solid $orange;
+				animation: block-anime1-1 2s linear infinite both;
+				@keyframes block-anime1-1 {
+					0% {
+						left: 0;
+						right: 0;
+						top: 0;
+						bottom: 0;
+						opacity: 1;
+					}
+					100% {
+						left: -4em;
+						right: -4em;
+						bottom: -4em;
+						top: -4em;
+						opacity: 0;
+					}
+				}
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				border-radius: 50%;
+				border: 0.3125em solid $orange;
+				animation: block-anime1-2 2s linear 3s infinite both;
+				@keyframes block-anime1-2 {
+					0% {
+						left: 0;
+						right: 0;
+						top: 0;
+						bottom: 0;
+						opacity: 1;
+					}
+					100% {
+						left: -4em;
+						right: -4em;
+						bottom: -4em;
+						top: -4em;
+						opacity: 0;
+					}
+				}
+			}
+			img {
+				background-color: $orange;
+				clip-path: circle(50% at 50% 50%);
+			}
+		}
+		.trio-slide__img {
+			width: 16.9375em;
+			height: 24.1875em;
+			left: 8em;
+			top: 2.5em;
+		}
+	}
+	&.block-anime2 {
+		.anime-block {
+			width: 24.0625em;
+			height: 24.0625em;
+			&::before {
+				content: "";
+				position: absolute;
+				transition: 0.4s ease;
+				//left: 0;
+				//right: 0;
+				//top: 0;
+				//bottom: 0;
+				left: 50%;
+				bottom: 50%;
+				transform: translateY(50%) translateX(-50%);
+				width: 0;
+				height: 0;
+				border-radius: 50%;
+				border: 0.1875em solid $purple;
+				//animation: block-anime2-1 3s linear infinite both;
+				//@keyframes block-anime2-1 {
+				//	0% {
+				//		width: 0;
+				//		height: 0;
+				//		opacity: 1;
+				//	}
+				//	100% {
+				//		//left: -4em;
+				//		//right: -4em;
+				//		//bottom: -4em;
+				//		//top: -4em;
+				//		width: 26em;
+				//		height: 26em;
+				//		opacity: 0;
+				//	}
+				//}
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				transition: 0.4s ease;
+				left: 1em;
+				right: 1em;
+				top: 1em;
+				bottom: 1em;
+				border: 1em solid $purple;
+				z-index: -1;
+				clip-path: polygon(
+					25% 0,
+					0 25%,
+					25% 50%,
+					0 75%,
+					25% 100%,
+					50% 75%,
+					75% 100%,
+					100% 75%,
+					75% 50%,
+					100% 25%,
+					75% 0,
+					50% 25%
+				);
+				//animation: block-anime2-2 3s linear 3s infinite both;
+				//@keyframes block-anime2-2 {
+				//	0% {
+				//		left: 1em;
+				//		right: 1em;
+				//		top: 1em;
+				//		bottom: 1em;
+				//		opacity: 1;
+				//	}
+				//	100% {
+				//		left: -4em;
+				//		right: -4em;
+				//		bottom: -4em;
+				//		top: -4em;
+				//		opacity: 0;
+				//	}
+				//}
+			}
+			img {
+				background-color: $purple;
+				clip-path: polygon(
+					25% 0,
+					0 25%,
+					25% 50%,
+					0 75%,
+					25% 100%,
+					50% 75%,
+					75% 100%,
+					100% 75%,
+					75% 50%,
+					100% 25%,
+					75% 0,
+					50% 25%
+				);
+			}
+		}
+		&:hover {
+			.anime-block {
+				&::before {
+					width: 29em;
+					height: 29em;
+				}
+				&::after {
+					left: -4em;
+					right: -4em;
+					bottom: -4em;
+					top: -4em;
+				}
+			}
+		}
+		.trio-slide__img {
+			width: 17.8125em;
+			height: 25.3125em;
+			top: -1.2em;
+			left: 9.8em;
+		}
+	}
+	&.block-anime3 {
+		.anime-block {
+			width: 26.75em;
+			height: 23.25em;
+			&::before {
+				content: "";
+				position: absolute;
+				clip-path: polygon(50% 0, 0% 100%, 3% 100%, 32% 42%, 50% 5%, 97% 98%, 4% 98%, 0 100%, 100% 100%, 71% 41%);
+				//border: 0.1875em solid $green;
+				background-color: $green;
+				left: 50%;
+				bottom: 50%;
+				transform: translateY(70%) translateX(-50%) rotate(180deg);
+				width: 0;
+				height: 0;
+				transition: 0.4s ease;
+			}
+			//&::after {
+			//	content: "";
+			//	position: absolute;
+			//	clip-path: polygon(50% 0, 0% 100%, 3% 100%, 32% 42%, 50% 5%, 97% 98%, 4% 98%, 0 100%, 100% 100%, 71% 41%);
+			//	//border: 0.1875em solid $green;
+			//	background-color: $green;
+			//	left: 50%;
+			//	bottom: 50%;
+			//	transform: translateY(50%) translateX(-50%);
+			//	width: 0;
+			//	height: 0;
+			//	transition: 0.4s ease;
+			//}
+			img {
+				clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+				background-color: $green;
+			}
+		}
+		&:hover {
+			.anime-block {
+				&::before {
+					width: 26.75em;
+					height: 23.25em;
+				}
+				//&::after {
+				//	width: 37em;
+				//	height: 32.5em;
+				//}
+			}
+		}
+		.trio-slide__img {
+			width: 25.5625em;
+			height: 24.5em;
+			left: 6em;
+		}
+	}
+
+	&-btn {
+		.btn-tar {
+			margin: 3em auto 0;
+		}
+	}
+}

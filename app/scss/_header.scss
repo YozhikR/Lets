@@ -1,8 +1,9 @@
 .main-header {
-	position: fixed;
+	position: static;
 	top: 0;
 	right: 0;
 	left: 0;
+	z-index: 2;
 	&-wrap {
 		padding-top: 1em;
 		display: flex;

@@ -128,7 +128,7 @@ body,
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
-	padding-top: 6.3em;
+	//padding-top: 6.3em;
 	overflow: hidden;
 }
 .main-content {
@@ -137,8 +137,8 @@ body,
 
 .cus-container {
 	max-width: 100em;
-	padding-left: 0.625em;
-	padding-right: 0.625em;
+	padding-left: 0.9375em;
+	padding-right: 0.9375em;
 	margin: 0 auto;
 }
 
@@ -229,5 +229,71 @@ body,
 	}
 	@media (min-width: $w-max) {
 		font-size: $f-max;
+	}
+}
+
+.success {
+	margin-top: 5em;
+	&__title {
+		margin-bottom: 5em;
+		h2 {
+			text-align: center;
+		}
+	}
+	&__counters {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&-item {
+			h3 {
+				font-size: 3.75em;
+				font-weight: 600;
+				color: $purple;
+				margin-bottom: 0.2em;
+			}
+			&:not(:last-child) {
+				margin-right: 8.75em;
+			}
+		}
+	}
+	@media (max-width: 1025px) {
+		&__title {
+			margin-bottom: 2em;
+			padding-left: 1em;
+			h2 {
+				text-align: left;
+			}
+		}
+		&__counters {
+			flex-flow: wrap;
+			margin: 0 -1em;
+			&-item {
+				width: 50%;
+				margin-right: 0 !important;
+				padding: 0 2em;
+				margin-bottom: 2.5em;
+				p {
+					br {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	@media (max-width: 568px) {
+		&__title {
+			h2 {
+				@include fluidFontSize(24px, 48px, 320px, 568px);
+			}
+		}
+		&__counters {
+			margin: 0 -0.5em;
+			&-item {
+				padding: 0 0.5em;
+				h3 {
+					@include fluidFontSize(36px, 60px, 320px, 568px);
+				}
+			}
+		}
 	}
 }

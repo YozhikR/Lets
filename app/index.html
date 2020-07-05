@@ -36,9 +36,9 @@
 								<a href="#">EN</a>
 							</div>
 							<div class="lets-sign-in-wrap">
-								<a href="#">Вход</a>
+								<a href="#popup" class="popup-link">Вход</a>
 								<span>/</span>
-								<a href="#">Регистрация</a>
+								<a href="#popup" class="popup-link">Регистрация</a>
 							</div>
 						</div>
 					</div>
@@ -83,11 +83,11 @@
 									</div>
 								</div>
 								<div class="first-section__btns">
-									<a href="#" class="btn-tar">
+									<a href="#popup" class="btn-tar popup-link">
 										<p>Тарифы</p>
 										<img src="images/dest/btn-arrow.svg" alt="Стрелочка">
 									</a>
-									<a href="#" class="btn-reg">
+									<a href="#popup" class="btn-reg popup-link">
 										<p>Зарегистрироваться</p>
 									</a>
 								</div>
@@ -133,8 +133,6 @@
 									<div class="swiper-button-prev"></div>
 									<div class="swiper-button-next"></div>
 
-									<!-- If we need scrollbar -->
-									<!--<div class="swiper-scrollbar"></div>-->
 								</div>
 
 							</div>
@@ -150,7 +148,28 @@
 					<div class="cus-container">
 						<div class="success-wrap">
 
+							<div class="success__title">
+								<h2>Наш успех в цифрах</h2>
+							</div>
 
+							<div class="success__counters" id="counter">
+								<div class="success__counters-item">
+									<h3><span class="count" data-stop="6">0</span> лет</h3>
+									<p>занимаем стабильную позицию<br> на образовательном рынке</p>
+								</div>
+								<div class="success__counters-item">
+									<h3><span class="count" data-stop="6657">0</span></h3>
+									<p>учеников с успешными показателями<br> на тестах и экзаменах</p>
+								</div>
+								<div class="success__counters-item">
+									<h3><span class="count" data-stop="798">0</span></h3>
+									<p>полученных грантов в лучшие ВУЗы<br> по результатам ЕНТ</p>
+								</div>
+								<div class="success__counters-item">
+									<h3><span class="count" data-stop="125">0</span></h3>
+									<p>призовых мест по международным<br> и казахстанским олимпиадам</p>
+								</div>
+							</div>
 
 						</div>
 						<!-- /.success-wrap -->
@@ -158,6 +177,241 @@
 					<!-- /.cus-container -->
 				</div>
 				<!-- /.success -->
+
+				<div class="second-section">
+					<div class="cus-container">
+						<div class="second-section-wrap">
+
+							<div class="second-section__stages">
+								<div class="second-section__stages-title">
+									<h2>Этапы продуктивного<br>
+										обучения в LETS</h2>
+								</div>
+								<div class="second-section__stages-items">
+									<div class="second-section__stages-item">
+										<div class="second-section__stages-item--number">
+											<h3>1</h3>
+										</div>
+										<div class="second-section__stages-item--text">
+											<h4>Регистрация на курс.</h4>
+											<p>Записаться на курсы Вы можете на нашем сайте или позвонив по телефону 87007000303.</p>
+										</div>
+										<div class="stages-item__img">
+											<img src="images/dest/stages-1-mob.png" alt="Иконка">
+										</div>
+									</div>
+									<div class="second-section__stages-item">
+										<div class="second-section__stages-item--number">
+											<h3>2</h3>
+										</div>
+										<div class="second-section__stages-item--text">
+											<h4>Онлайн - трансляция уроков.</h4>
+											<p>Прямые трансляции с преподавателем: разбор темы, обсуждение, совместные решения задач, опрос.
+											</p>
+										</div>
+										<div class="stages-item__img">
+											<img src="images/dest/stages-2-mob.svg" alt="Иконка">
+										</div>
+									</div>
+									<div class="second-section__stages-item">
+										<div class="second-section__stages-item--number">
+											<h3>3</h3>
+										</div>
+										<div class="second-section__stages-item--text">
+											<h4>Домашние задания к каждому уроку.</h4>
+											<p>После проведенного занятия преподаватели дают задания на дом для закрепления пройденного
+												материала.
+											</p>
+										</div>
+										<div class="stages-item__img">
+											<img src="images/dest/stages-3-mob.svg" alt="Иконка">
+										</div>
+									</div>
+									<div class="second-section__stages-item">
+										<div class="second-section__stages-item--number">
+											<h3>4</h3>
+										</div>
+										<div class="second-section__stages-item--text">
+											<h4>Регулярное тестирование.</h4>
+											<p>Чтобы отслеживать результаты и выявлять слабые стороны ученика периодически организовываются
+												тесты и экзамены.</p>
+										</div>
+										<div class="stages-item__img">
+											<img src="images/dest/stages-4-mob.svg" alt="Иконка">
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- /.second-section__stages -->
+
+							<div class="second-section__slider">
+
+								<!-- Slider main container -->
+								<div class="stages-swiper-container">
+									<!-- Additional required wrapper -->
+									<div class="swiper-wrapper">
+										<!-- Slides -->
+										<div class="stages-swiper-slide" data-id="1">
+											<div class="stages-slide__img">
+												<img src="images/dest/slide2-1.png" alt="Слайд">
+											</div>
+											<div class="stages-slide__img-svg">
+												<img src="images/dest/stages-1.png" alt="Иконка">
+											</div>
+										</div>
+										<div class="stages-swiper-slide" data-id="2">
+											<div class="stages-slide__img">
+												<img src="images/dest/slide1-2.jpg" alt="Слайд">
+											</div>
+											<div class="stages-slide__img-svg">
+												<img src="images/dest/stages-2.svg" alt="Иконка">
+											</div>
+										</div>
+										<div class="stages-swiper-slide" data-id="1">
+											<div class="stages-slide__img">
+												<img src="images/dest/slide1-1.jpg" alt="Слайд">
+											</div>
+											<div class="stages-slide__img-svg">
+												<img src="images/dest/stages-3.svg" alt="Иконка">
+											</div>
+										</div>
+										<div class="stages-swiper-slide" data-id="2">
+											<div class="stages-slide__img">
+												<img src="images/dest/slide1-2.jpg" alt="Слайд">
+											</div>
+											<div class="stages-slide__img-svg">
+												<img src="images/dest/stages-4.svg" alt="Иконка">
+											</div>
+										</div>
+									</div>
+									<!-- If we need pagination -->
+									<div class="swiper-pagination"></div>
+
+									<!-- If we need navigation buttons -->
+									<!--<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>-->
+
+								</div>
+
+							</div>
+							<!-- /.second-section__slider -->
+
+						</div>
+						<!-- /.second-section-wrap -->
+					</div>
+					<!-- /.cus-container -->
+				</div>
+				<!-- /.second-section -->
+
+				<div class="third-section">
+					<div class="cus-container">
+						<div class="third-section-wrap">
+
+							<div class="third-section__title">
+								<h2>Зарегиструйтесь прямо сейчас и начните путь<br> к успешному образованию </h2>
+							</div>
+
+							<div class="third-section__slider">
+
+								<!-- Slider main container -->
+								<div class="trio-swiper-container">
+									<!-- Additional required wrapper -->
+									<div class="swiper-wrapper">
+										<!-- Slides -->
+										<div class="swiper-slide trio-slide" data-id="1">
+											<div class="trio-slide__block block-anime1">
+												<div class="trio-slide__block-anime">
+													<div class="anime-block">
+														<img src="images/dest/slide3-1.png" alt="Фон">
+													</div>
+													<div class="trio-slide__img">
+														<img src="images/dest/people-1.png" alt="Слайд">
+													</div>
+												</div>
+												<div class="trio-slide__block-btn">
+													<a href="#popup" class="btn-tar popup-link">
+														<p>Школьник</p>
+														<img src="images/dest/btn-arrow.svg" alt="Стрелочка">
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide trio-slide" data-id="2">
+											<div class="trio-slide__block block-anime2">
+												<div class="trio-slide__block-anime">
+													<div class="anime-block">
+														<img src="images/dest/slide3-1.png" alt="Фон">
+													</div>
+													<div class="trio-slide__img">
+														<img src="images/dest/people-2.png" alt="Слайд">
+													</div>
+												</div>
+												<div class="trio-slide__block-btn">
+													<a href="#popup" class="btn-tar popup-link">
+														<p>Студент</p>
+														<img src="images/dest/btn-arrow.svg" alt="Стрелочка">
+													</a>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide trio-slide" data-id="1">
+											<div class="trio-slide__block block-anime3">
+												<div class="trio-slide__block-anime">
+													<div class="anime-block">
+														<img src="images/dest/slide3-1.png" alt="Фон">
+													</div>
+													<div class="trio-slide__img">
+														<img src="images/dest/people-3.png" alt="Слайд">
+													</div>
+												</div>
+												<div class="trio-slide__block-btn">
+													<a href="#popup" class="btn-tar popup-link">
+														<p>Родитель</p>
+														<img src="images/dest/btn-arrow.svg" alt="Стрелочка">
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- If we need pagination -->
+									<div class="swiper-pagination"></div>
+
+									<!-- If we need navigation buttons -->
+									<!--<div class="swiper-button-prev"></div>
+									<div class="swiper-button-next"></div>-->
+
+								</div>
+
+							</div>
+							<!-- /.third-section__slider -->
+
+						</div>
+						<!-- /.third-section -->
+					</div>
+					<!-- /.cus-container -->
+				</div>
+				<!-- /.third-section -->
+
+				<div id="popup" class="popup">
+					<div class="popup__body">
+						<div class="popup__content-wrap">
+							<div class="popup__content">
+								<a href="#header" class="popup__close close-popup"></a>
+								<div class="popup__title">Пожалуйста, оставьте свои данные и менеджер перезвонит Вам в течении 10 минут.
+								</div>
+								<div class="popup__text">
+									<div class="popup__text-inputs">
+										<input type="text" placeholder="Имя">
+										<input type="text" placeholder="Телефон">
+									</div>
+									<div class="popup__text-btn">
+										<a href="#" class="btn-reg">Отправить</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
 			</main>
 			<!-- /.main-content -->
