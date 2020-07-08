@@ -79,11 +79,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		//autoplay: {
 		//	delay: 3000,
 		//},
-		//on: {
-		//	slideChangeTransitionStart: function () {
-		//		bannerText();
-		//	},
-		//},
+		on: {
+			slideChangeTransitionStart: function () {
+				bannerTextTrio();
+			},
+		},
 		//pagination: {
 		//	el: '.swiper-pagination',
 		//	type: 'bullets',
@@ -96,12 +96,26 @@ document.addEventListener("DOMContentLoaded", function () {
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				spaceBetween: 100,
 			},
 			1025: {
 				slidesPerView: 3,
+				spaceBetween: 0,
 			},
 		}
 	})
+
+	bannerTextTrio();
+	function bannerTextTrio() {
+		var idTrio = $('.third-section .swiper-slide-active').data("idtrio");
+		$('.third-section__slider-title').fadeOut().promise().done(function () {
+			$('.third-section__slider-title[data-idtrio=' + idTrio + ']').fadeIn();
+		});
+	}
 
 	const popupLinks = document.querySelectorAll('.popup-link');
 	const body = document.querySelector('body');
