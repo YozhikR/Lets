@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	firstSlider = document.querySelector('.swiper-container');
 	stagesSlider = document.querySelector('.stages-swiper-container');
 	trioSlider = document.querySelector('.trio-swiper-container');
+	teachSlider = document.querySelector('.teachers-swiper-container');
+	navSlider = document.querySelector('.nav-swiper-container');
 
 	let mySwiper = new Swiper(firstSlider, {
 		slidesPerView: 1.1,
@@ -116,6 +118,79 @@ document.addEventListener("DOMContentLoaded", function () {
 			$('.third-section__slider-title[data-idtrio=' + idTrio + ']').fadeIn();
 		});
 	}
+
+	let navSwiper = new Swiper(navSlider, {
+		slidesPerView: 7,
+		centeredSlides: true,
+		//spaceBetween: 100,
+		//wrapperClass: 'stages-swiper-wrapper',
+		//slideClass: 'stages-swiper-slide',
+		loop: true,
+		//autoplay: {
+		//	delay: 3000,
+		//},
+		//pagination: {
+		//	el: '.swiper-pagination',
+		//	type: 'bullets',
+		//	clickable: true,
+		//},
+		//navigation: {
+		//	nextEl: '.swiper-button-next',
+		//	prevEl: '.swiper-button-prev',
+		//},
+		//breakpoints: {
+		//	320: {
+		//		slidesPerView: 1,
+		//		navigation: {
+		//			nextEl: '.swiper-button-next',
+		//			prevEl: '.swiper-button-prev',
+		//		},
+		//		spaceBetween: 100,
+		//	},
+		//	1025: {
+		//		slidesPerView: 3,
+		//		spaceBetween: 0,
+		//	},
+		//}
+	})
+
+
+	let teachSwiper = new Swiper(teachSlider, {
+		//slidesPerView: 3,
+		//spaceBetween: 100,
+		//wrapperClass: 'stages-swiper-wrapper',
+		//slideClass: 'stages-swiper-slide',
+		//loop: true,
+		//autoplay: {
+		//	delay: 3000,
+		//},
+		//pagination: {
+		//	el: '.swiper-pagination',
+		//	type: 'bullets',
+		//	clickable: true,
+		//},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		//breakpoints: {
+		//	320: {
+		//		slidesPerView: 1,
+		//		navigation: {
+		//			nextEl: '.swiper-button-next',
+		//			prevEl: '.swiper-button-prev',
+		//		},
+		//		spaceBetween: 100,
+		//	},
+		//	1025: {
+		//		slidesPerView: 3,
+		//		spaceBetween: 0,
+		//	},
+		//},
+		thumbs: {
+			swiper: navSwiper,
+		},
+	})
 
 	const popupLinks = document.querySelectorAll('.popup-link');
 	const body = document.querySelector('body');

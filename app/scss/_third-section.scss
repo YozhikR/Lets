@@ -15,7 +15,8 @@
 	&__slider {
 		position: relative;
 		&-title {
-			display: none;
+			opacity: 0;
+			visibility: hidden;
 			h3 {
 				font-size: 2.25em;
 				text-align: center;
@@ -24,6 +25,8 @@
 			}
 			@media (max-width: 1025px) {
 				display: block;
+				visibility: visible;
+				opacity: 1;
 			}
 		}
 	}

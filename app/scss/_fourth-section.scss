@@ -1,0 +1,218 @@
+.fourth-section {
+	padding: 7.125rem 0 6.25rem;
+	&__slider {
+		padding: 0 7.5em;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			border: 0.375em solid $green;
+			border-radius: 6.25em;
+			width: 23.5625em;
+			height: 22.8125em;
+			z-index: -1;
+			right: 11em;
+			top: 2em;
+		}
+		&-img {
+			position: absolute;
+			width: 18.6875em;
+			height: 12.75em;
+			left: 2.7em;
+			top: 4em;
+			img {
+				width: 100%;
+				height: 100%;
+				display: block;
+			}
+		}
+	}
+	&__headline {
+		margin-bottom: 0.5em;
+	}
+}
+
+.teachers-swiper-container {
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	//padding: 4em 0;
+	padding-top: 4em;
+	padding-bottom: 4em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	margin-top: -4em;
+	margin-bottom: -4em;
+	&-wrap {
+		position: relative;
+		margin-bottom: 3em;
+	}
+	.teach-slide {
+		&__wrap {
+			display: flex;
+			&-img {
+				border: 0.0625em solid #fff;
+				border-radius: 6.25em;
+				width: 35.9375em;
+				height: 29.8125em;
+				box-shadow: 0em 1em 1.82em 0.18em rgba(30, 46, 97, 0.35);
+				img {
+					width: 100%;
+					height: 100%;
+					display: block;
+					object-fit: cover;
+					border-radius: 6.25em;
+				}
+			}
+		}
+		&__text {
+			width: 50%;
+			padding: 3.75em 1.875em 1.875em 1.875em;
+			&-title {
+				position: relative;
+				padding-bottom: 1.5625em;
+				&::after {
+					content: "";
+					position: absolute;
+					background-color: $gray;
+					height: 0.0625em;
+					left: 0;
+					right: 0;
+					bottom: 0;
+				}
+				h3 {
+					color: $purple;
+					font-size: 2.25em;
+				}
+			}
+			&-description {
+				padding: 2.5em 0 1.875em;
+				position: relative;
+				&::after {
+					content: "";
+					position: absolute;
+					background-color: $gray;
+					height: 0.0625em;
+					left: 0;
+					right: 0;
+					bottom: 0;
+				}
+				&--cell {
+					display: flex;
+					text-align: left;
+					&:not(:last-child) {
+						margin-bottom: 2.5em;
+					}
+					p {
+						font-size: 1em;
+						color: $gray;
+						width: 8.125em;
+					}
+					h6 {
+						font-size: 1.125em;
+						color: #000;
+						font-weight: bold;
+						width: 100%;
+						padding-left: 1.25em;
+					}
+				}
+			}
+			&-btn {
+				padding-top: 2.5em;
+			}
+		}
+	}
+	.swiper-button-next,
+	.swiper-button-prev {
+		bottom: 50%;
+		transform: translateY(50%);
+	}
+	.swiper-button-prev {
+		left: 0;
+	}
+	.swiper-button-next {
+		right: 0;
+	}
+}
+
+.nav-swiper-container {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 17.5em;
+	padding: 4em 0;
+	margin: -4em 0;
+	&-wrap {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			height: 0.375em;
+			z-index: -1;
+			bottom: 50%;
+			transform: translateY(50%);
+			left: -7em;
+			right: -7em;
+			//background-image: linear-gradient(0deg, rgb(251, 248, 246) 0%, rgb(106, 191, 40) 51%, rgb(251, 248, 246) 100%);
+			background-image: url("../images/dest/fourth-sec-element.png");
+			background-size: 100%;
+		}
+	}
+	.nav-slide {
+		&__wrap {
+			cursor: pointer;
+			&-title {
+				text-align: center;
+				p {
+					font-size: 0.875em;
+					color: $gray;
+					font-weight: bold;
+					white-space: nowrap;
+				}
+				h5 {
+					font-size: 0.75em;
+					font-weight: bold;
+					white-space: nowrap;
+					margin-bottom: 0.3em;
+				}
+			}
+			&-img {
+				width: 5.375em;
+				height: 5.375em;
+				border: 0.125em solid #fff;
+				border-radius: 50%;
+				box-shadow: 0em 0.3125em 1.02375em 0.10125em rgba(30, 46, 97, 0.35);
+				margin: 0 auto;
+				transition: 0.3s ease;
+				img {
+					border-radius: 50%;
+					width: 100%;
+					height: 100%;
+					display: block;
+					object-fit: cover;
+				}
+			}
+		}
+		&:hover {
+			&__wrap {
+				&-img {
+					border: 0.125em solid $purple;
+				}
+			}
+		}
+	}
+	.swiper-slide-active {
+		.nav-slide__wrap {
+			&-title {
+				display: none;
+			}
+			&-img {
+				border: 0.125em solid $green;
+				width: 9.125em;
+				height: 9.125em;
+				box-shadow: 0em 1em 1.82em 0.18em rgba(30, 46, 97, 0.35);
+			}
+		}
+	}
+}
