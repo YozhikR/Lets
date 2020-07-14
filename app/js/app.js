@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	let teachSwiper = new Swiper(teachSlider, {
 		//slidesPerView: 3,
-		//spaceBetween: 100,
+		spaceBetween: 30,
 		//wrapperClass: 'stages-swiper-wrapper',
 		//slideClass: 'stages-swiper-slide',
 		//loop: true,

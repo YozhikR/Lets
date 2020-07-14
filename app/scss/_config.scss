@@ -232,6 +232,34 @@ body,
 	}
 }
 
+@mixin fluidWidth($f-min, $f-max, $w-min, $w-max, $fallback: false) {
+	width: $f-min;
+
+	@media (min-width: $w-min) {
+		@if ($fallback) {
+			width: $fallback;
+		}
+		width: fs($f-min, $f-max, $w-min, $w-max, px);
+	}
+	@media (min-width: $w-max) {
+		width: $f-max;
+	}
+}
+
+@mixin fluidHeight($f-min, $f-max, $w-min, $w-max, $fallback: false) {
+	height: $f-min;
+
+	@media (min-width: $w-min) {
+		@if ($fallback) {
+			height: $fallback;
+		}
+		height: fs($f-min, $f-max, $w-min, $w-max, px);
+	}
+	@media (min-width: $w-max) {
+		height: $f-max;
+	}
+}
+
 .success {
 	margin-top: 5em;
 	&__title {

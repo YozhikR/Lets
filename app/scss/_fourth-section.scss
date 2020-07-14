@@ -30,6 +30,28 @@
 	&__headline {
 		margin-bottom: 0.5em;
 	}
+	@media (max-width: 1025px) {
+		&__slider {
+			padding: 0;
+			&::before {
+				display: none;
+			}
+			&-img {
+				left: auto;
+				right: 0em;
+				width: 14.6875em;
+				height: 9.75em;
+			}
+		}
+		&__headline {
+			h2 {
+				@include fluidFontSize(18px, 32px, 320px, 1025px);
+				br {
+					display: none;
+				}
+			}
+		}
+	}
 }
 
 .teachers-swiper-container {
@@ -43,7 +65,7 @@
 	padding-left: 1.5em;
 	padding-right: 1.5em;
 	margin-top: -4em;
-	margin-bottom: -4em;
+	margin-bottom: -8em;
 	&-wrap {
 		position: relative;
 		margin-bottom: 3em;
@@ -134,6 +156,172 @@
 	.swiper-button-next {
 		right: 0;
 	}
+	@media (max-width: 1025px) {
+		padding: 0;
+		margin: 0;
+		.teach-slide {
+			&__wrap {
+				flex-flow: row-reverse;
+				justify-content: flex-end;
+				padding: 1.7em 1.7em 3.5em;
+				&-img {
+					border: 0.1875em solid $green;
+					border-radius: 5em;
+					box-shadow: 0em 1em 1.82em 0.18em rgba(30, 46, 97, 0.35);
+					width: 16.0625em;
+					height: 16.6875em;
+					img {
+						border-radius: 5em;
+					}
+				}
+			}
+			&__text {
+				max-width: 70%;
+				width: auto;
+				padding: 1.95em 0 1.875em 1.475em;
+				&-title {
+					h3 {
+						font-size: 1.5em;
+					}
+					&::after {
+						display: none;
+					}
+				}
+				&-description {
+					padding: 0;
+					position: static;
+					&::after {
+						display: none;
+					}
+					&--cell {
+						flex-flow: column;
+						&:not(:last-child) {
+							margin-bottom: 1em;
+						}
+						p {
+							margin-bottom: 1em;
+						}
+						h6 {
+							padding-left: 0;
+						}
+						&:last-child {
+							position: relative;
+							display: none;
+							width: 100%;
+							padding: 1.5em 0;
+							left: 0;
+							bottom: 0;
+							&::before {
+								content: "";
+								position: absolute;
+								background-color: $gray;
+								height: 0.0625em;
+								left: 0;
+								right: 0;
+								top: 0;
+							}
+							&::after {
+								content: "";
+								position: absolute;
+								background-color: $gray;
+								height: 0.0625em;
+								left: 0;
+								right: 0;
+								bottom: 0;
+							}
+						}
+					}
+				}
+				&-btn {
+					display: none;
+				}
+			}
+		}
+		.swiper-button-next,
+		.swiper-button-prev {
+			bottom: auto;
+			top: 19em;
+		}
+	}
+	@media (max-width: 568px) {
+		overflow: visible;
+		.teach-slide {
+			&__wrap {
+				padding: 1.7em 0 3.5em;
+				&-img {
+					@include fluidHeight(150px, 280px, 320px, 568px);
+				}
+			}
+			&__text {
+				padding: 0.95em 0 1.875em 1.075em;
+				&-title {
+					padding-bottom: 0.5em;
+					h3 {
+						@include fluidFontSize(18px, 20px, 320px, 568px);
+					}
+					&::after {
+						display: none;
+					}
+				}
+				&-description {
+					&--cell {
+						p {
+							margin-bottom: 1em;
+							font-size: 1em;
+						}
+						h6 {
+							padding-left: 0;
+							font-size: 1em;
+						}
+					}
+				}
+			}
+		}
+		.swiper-button-next,
+		.swiper-button-prev {
+			bottom: auto;
+			top: 17em;
+		}
+	}
+}
+
+.teach-slide__text-description--cell-mob {
+	display: none;
+	@media (max-width: 1025px) {
+		display: block;
+		position: relative;
+		padding: 1.5em 0;
+		&::before {
+			content: "";
+			position: absolute;
+			background-color: $gray;
+			height: 0.0625em;
+			left: 0;
+			right: 0;
+			top: 0;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			background-color: $gray;
+			height: 0.0625em;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+		p {
+			font-size: 1em;
+			color: $gray;
+			width: 8.125em;
+			margin-bottom: 1em;
+		}
+		h6 {
+			font-size: 1.125em;
+			color: #000;
+			font-weight: bold;
+			width: 100%;
+		}
+	}
 }
 
 .nav-swiper-container {
@@ -169,12 +357,14 @@
 					color: $gray;
 					font-weight: bold;
 					white-space: nowrap;
+					transition: 0.3s ease;
 				}
 				h5 {
 					font-size: 0.75em;
 					font-weight: bold;
 					white-space: nowrap;
 					margin-bottom: 0.3em;
+					transition: 0.3s ease;
 				}
 			}
 			&-img {
@@ -195,7 +385,15 @@
 			}
 		}
 		&:hover {
-			&__wrap {
+			.nav-slide__wrap {
+				&-title {
+					p {
+						color: $blue;
+					}
+					h5 {
+						color: $blue;
+					}
+				}
 				&-img {
 					border: 0.125em solid $purple;
 				}
@@ -213,6 +411,11 @@
 				height: 9.125em;
 				box-shadow: 0em 1em 1.82em 0.18em rgba(30, 46, 97, 0.35);
 			}
+		}
+	}
+	@media (max-width: 1025px) {
+		&-wrap {
+			display: none;
 		}
 	}
 }
