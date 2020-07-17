@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	trioSlider = document.querySelector('.trio-swiper-container');
 	teachSlider = document.querySelector('.teachers-swiper-container');
 	navSlider = document.querySelector('.nav-swiper-container');
+	studentsSlider = document.querySelector('.students-swiper-container');
 
 	let mySwiper = new Swiper(firstSlider, {
 		slidesPerView: 1.1,
@@ -192,6 +193,40 @@ document.addEventListener("DOMContentLoaded", function () {
 		},
 	})
 
+	let studentsSwiper = new Swiper(studentsSlider, {
+		//slidesPerView: 3,
+		spaceBetween: 100,
+		//wrapperClass: 'stages-swiper-wrapper',
+		//slideClass: 'stages-swiper-slide',
+		loop: true,
+		//autoplay: {
+		//	delay: 3000,
+		//},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		//breakpoints: {
+		//	320: {
+		//		slidesPerView: 1,
+		//		navigation: {
+		//			nextEl: '.swiper-button-next',
+		//			prevEl: '.swiper-button-prev',
+		//		},
+		//		spaceBetween: 100,
+		//	},
+		//	1025: {
+		//		slidesPerView: 3,
+		//		spaceBetween: 0,
+		//	},
+		//},
+	})
+
 	const popupLinks = document.querySelectorAll('.popup-link');
 	const body = document.querySelector('body');
 	const lockPadding = document.querySelectorAll(".lock-padding");
@@ -315,6 +350,12 @@ document.addEventListener("DOMContentLoaded", function () {
 				Element.prototype.msMatchesSelector;
 		}
 	})();
+
+	// Tabs =====
+
+	$('#tab_selector').on('change', function (e) {
+		$('.form-tabs li a').eq($(this).val()).tab('show');
+	});
 
 });
 

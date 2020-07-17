@@ -1,0 +1,346 @@
+.six-section {
+	padding: 9.375em 0 8.125em;
+	&__headline {
+		margin-bottom: 5em;
+		h2 {
+			text-align: center;
+		}
+	}
+	&__tabs {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			border: 0.375em solid #6abf28;
+			border-radius: 6.25em;
+			width: 23.5625em;
+			height: 22.8125em;
+			z-index: -1;
+			left: 6em;
+			top: 8em;
+		}
+	}
+}
+
+.tabbable {
+	position: relative;
+	.tab-pane {
+		padding: 0 6em;
+	}
+}
+
+.visible-xs {
+	display: none;
+}
+
+.custom-tabs {
+	margin-bottom: 5em;
+	display: flex;
+	justify-content: space-between;
+	&::before {
+		content: "";
+		position: absolute;
+		height: 0.375em;
+		z-index: -1;
+		top: 2em;
+		-webkit-transform: translateY(50%);
+		-ms-transform: translateY(50%);
+		transform: translateY(50%);
+		left: -7em;
+		right: -7em;
+		background-image: url(../images/dest/fourth-sec-element.png);
+		background-size: 100%;
+	}
+	li {
+		width: 13em;
+		a {
+			text-align: center;
+			display: block;
+			font-size: 0.875em;
+			font-weight: 600;
+			color: #000;
+			&.active {
+				border-bottom: 0.625em solid $green;
+			}
+		}
+	}
+}
+
+.students-swiper-container {
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	//padding: 4em 0;
+	padding-top: 4em;
+	padding-bottom: 4em;
+	padding-left: 2.5em;
+	padding-right: 2.5em;
+	margin-top: -1em;
+	margin-bottom: -8em;
+	&-wrap {
+		position: relative;
+		margin-bottom: 3em;
+	}
+	.students-slide {
+		&__wrap {
+			display: flex;
+			justify-content: center;
+			&-img {
+				border: 0.0625em solid #fff;
+				border-radius: 6.25em;
+				width: 29.625em;
+				height: 31.125em;
+				box-shadow: 0em 1em 1.82em 0.18em rgba(30, 46, 97, 0.35);
+				img {
+					width: 100%;
+					height: 100%;
+					display: block;
+					object-fit: cover;
+					border-radius: 6.25em;
+				}
+			}
+		}
+		&__text {
+			width: 60%;
+			padding: 1.75em 1.875em 1.875em 1.875em;
+			&-title {
+				position: relative;
+				padding-bottom: 1.5625em;
+				&::after {
+					content: "";
+					position: absolute;
+					background-color: $gray;
+					height: 0.0625em;
+					left: 0;
+					right: 0;
+					bottom: 0;
+				}
+				h3 {
+					color: $purple;
+					font-size: 2.25em;
+				}
+			}
+			&-description {
+				padding: 2.5em 0 1.875em;
+				position: relative;
+				&::after {
+					content: "";
+					position: absolute;
+					background-color: $gray;
+					height: 0.0625em;
+					left: 0;
+					right: 0;
+					bottom: 0;
+				}
+				&--cell {
+					display: flex;
+					text-align: left;
+					&:not(:last-child) {
+						margin-bottom: 2.5em;
+					}
+					p {
+						font-size: 1em;
+						color: $gray;
+						width: 8.125em;
+					}
+					h6 {
+						font-size: 1.125em;
+						color: #000;
+						font-weight: bold;
+						width: 100%;
+						padding-left: 1.25em;
+					}
+				}
+			}
+			&-btn {
+				padding-top: 2.5em;
+				.btn-tar {
+					margin-left: auto;
+				}
+			}
+		}
+	}
+	.swiper-pagination {
+		left: 14em;
+		top: 38em;
+		width: auto;
+	}
+	.swiper-button-next,
+	.swiper-button-prev {
+		bottom: 50%;
+		transform: translateY(50%);
+	}
+	.swiper-button-prev {
+		left: 0;
+	}
+	.swiper-button-next {
+		right: 0;
+	}
+	@media (max-width: 1025px) {
+		padding: 0;
+		margin: 0;
+		.students-slide {
+			&__wrap {
+				flex-flow: row-reverse;
+				justify-content: flex-end;
+				padding: 1.7em 1.7em 3.5em;
+				&-img {
+					border: 0.1875em solid $green;
+					border-radius: 5em;
+					box-shadow: 0em 1em 1.82em 0.18em rgba(30, 46, 97, 0.35);
+					width: 16.0625em;
+					height: 16.6875em;
+					img {
+						border-radius: 5em;
+					}
+				}
+			}
+			&__text {
+				max-width: 70%;
+				width: auto;
+				padding: 1.95em 0 1.875em 1.475em;
+				&-title {
+					h3 {
+						font-size: 1.5em;
+					}
+					&::after {
+						display: none;
+					}
+				}
+				&-description {
+					padding: 0;
+					position: static;
+					&::after {
+						display: none;
+					}
+					&--cell {
+						flex-flow: column;
+						&:not(:last-child) {
+							margin-bottom: 1em;
+						}
+						p {
+							margin-bottom: 1em;
+						}
+						h6 {
+							padding-left: 0;
+						}
+						&:last-child {
+							position: relative;
+							display: none;
+							width: 100%;
+							padding: 1.5em 0;
+							left: 0;
+							bottom: 0;
+							&::before {
+								content: "";
+								position: absolute;
+								background-color: $gray;
+								height: 0.0625em;
+								left: 0;
+								right: 0;
+								top: 0;
+							}
+							&::after {
+								content: "";
+								position: absolute;
+								background-color: $gray;
+								height: 0.0625em;
+								left: 0;
+								right: 0;
+								bottom: 0;
+							}
+						}
+					}
+				}
+				&-btn {
+					display: none;
+				}
+			}
+		}
+		.swiper-button-next,
+		.swiper-button-prev {
+			bottom: auto;
+			top: 19em;
+		}
+	}
+	@media (max-width: 568px) {
+		overflow: visible;
+		.students-slide {
+			&__wrap {
+				padding: 1.7em 0 3.5em;
+				&-img {
+					@include fluidHeight(150px, 280px, 320px, 568px);
+				}
+			}
+			&__text {
+				padding: 0.95em 0 1.875em 1.075em;
+				&-title {
+					padding-bottom: 0.5em;
+					h3 {
+						@include fluidFontSize(18px, 20px, 320px, 568px);
+					}
+					&::after {
+						display: none;
+					}
+				}
+				&-description {
+					&--cell {
+						p {
+							margin-bottom: 1em;
+							font-size: 1em;
+						}
+						h6 {
+							padding-left: 0;
+							font-size: 1em;
+						}
+					}
+				}
+			}
+		}
+		.swiper-button-next,
+		.swiper-button-prev {
+			bottom: auto;
+			top: 17em;
+		}
+	}
+}
+
+.students-slide__text-description--cell-mob {
+	display: none;
+	@media (max-width: 1025px) {
+		display: block;
+		position: relative;
+		padding: 1.5em 0;
+		&::before {
+			content: "";
+			position: absolute;
+			background-color: $gray;
+			height: 0.0625em;
+			left: 0;
+			right: 0;
+			top: 0;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			background-color: $gray;
+			height: 0.0625em;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+		p {
+			font-size: 1em;
+			color: $gray;
+			width: 8.125em;
+			margin-bottom: 1em;
+		}
+		h6 {
+			font-size: 1.125em;
+			color: #000;
+			font-weight: bold;
+			width: 100%;
+		}
+	}
+}
