@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	trioSlider = document.querySelector('.trio-swiper-container');
 	teachSlider = document.querySelector('.teachers-swiper-container');
 	navSlider = document.querySelector('.nav-swiper-container');
-	studentsSlider = document.querySelector('.students-swiper-container');
+
 
 	let mySwiper = new Swiper(firstSlider, {
 		slidesPerView: 1.1,
@@ -193,15 +193,17 @@ document.addEventListener("DOMContentLoaded", function () {
 		},
 	})
 
-	let studentsSwiper = new Swiper(studentsSlider, {
-		//slidesPerView: 3,
+
+	studentsSlider1 = document.querySelector('.students-swiper-container1');
+	studentsSlider2 = document.querySelector('.students-swiper-container2');
+	studentsSlider3 = document.querySelector('.students-swiper-container3');
+	studentsSlider4 = document.querySelector('.students-swiper-container4');
+	studentsSlider5 = document.querySelector('.students-swiper-container5');
+	studentsSlider6 = document.querySelector('.students-swiper-container6');
+
+	let studentsSwiper1 = new Swiper(studentsSlider1, {
 		spaceBetween: 100,
-		//wrapperClass: 'stages-swiper-wrapper',
-		//slideClass: 'stages-swiper-slide',
 		loop: true,
-		//autoplay: {
-		//	delay: 3000,
-		//},
 		pagination: {
 			el: '.swiper-pagination',
 			type: 'bullets',
@@ -211,20 +213,76 @@ document.addEventListener("DOMContentLoaded", function () {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
-		//breakpoints: {
-		//	320: {
-		//		slidesPerView: 1,
-		//		navigation: {
-		//			nextEl: '.swiper-button-next',
-		//			prevEl: '.swiper-button-prev',
-		//		},
-		//		spaceBetween: 100,
-		//	},
-		//	1025: {
-		//		slidesPerView: 3,
-		//		spaceBetween: 0,
-		//	},
-		//},
+	})
+
+	let studentsSwiper2 = new Swiper(studentsSlider2, {
+		spaceBetween: 100,
+		loop: true,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	})
+
+	let studentsSwiper3 = new Swiper(studentsSlider3, {
+		spaceBetween: 100,
+		loop: true,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	})
+
+	let studentsSwiper4 = new Swiper(studentsSlider4, {
+		spaceBetween: 100,
+		loop: true,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	})
+
+	let studentsSwiper5 = new Swiper(studentsSlider5, {
+		spaceBetween: 100,
+		loop: true,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	})
+
+	let studentsSwiper6 = new Swiper(studentsSlider6, {
+		spaceBetween: 100,
+		loop: true,
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
 	})
 
 	const popupLinks = document.querySelectorAll('.popup-link');

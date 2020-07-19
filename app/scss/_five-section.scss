@@ -18,6 +18,15 @@
 	}
 	&__element {
 		position: absolute;
+		animation: five-sect 10s linear infinite both;
+		@keyframes five-sect {
+			0% {
+				transform: translateX(-2000%);
+			}
+			100% {
+				transform: translateX(2000%);
+			}
+		}
 		&:nth-child(1) {
 			top: 18em;
 			left: 2em;
