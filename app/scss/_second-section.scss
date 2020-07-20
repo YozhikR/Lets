@@ -6,7 +6,7 @@
 	}
 	&__stages {
 		&-title {
-			margin-bottom: 7.1875em;
+			margin-bottom: 6.1875em;
 		}
 		&-items {
 			display: flex;
@@ -31,7 +31,9 @@
 				padding-left: 1.5875em;
 				padding-top: 3em;
 				h4 {
-					margin-bottom: 1.875em;
+					font-size: 1.125em;
+					font-weight: bold;
+					margin-bottom: 1.275em;
 					transition: 0.3s ease;
 				}
 			}

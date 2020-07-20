@@ -98,6 +98,21 @@
 	}
 
 	&.block-anime1 {
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			background-image: url("../images/dest/head-child.png");
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 0;
+			height: 20.0625em;
+			z-index: 2;
+			left: 45%;
+			top: 0;
+			transform: translateX(-50%);
+		}
 		.anime-block {
 			margin-top: 2em;
 			width: 20.75em;
@@ -160,6 +175,22 @@
 			img {
 				background-color: $orange;
 				clip-path: circle(50% at 50% 50%);
+			}
+		}
+		&:hover {
+			&::before {
+				content: "";
+				position: absolute;
+				background-image: url("../images/dest/head-child.png");
+				background-size: 100%;
+				background-repeat: no-repeat;
+				background-position: center;
+				width: 19.5em;
+				height: 20.0625em;
+				z-index: 2;
+				left: 45%;
+				top: 0;
+				transform: translateX(-50%);
 			}
 		}
 		.trio-slide__img {
@@ -351,6 +382,9 @@
 	&-btn {
 		.btn-tar {
 			margin: 3em auto 0;
+			max-width: 16.25em;
+			width: 100%;
+			justify-content: space-evenly;
 		}
 		@media (max-width: 1025px) {
 			position: absolute;

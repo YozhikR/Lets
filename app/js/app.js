@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	let mySwiper = new Swiper(firstSlider, {
 		slidesPerView: 1.1,
+		speed: 1000,
 		//spaceBetween: 100,
 		loop: true,
 		autoplay: {

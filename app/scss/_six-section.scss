@@ -296,7 +296,7 @@
 				justify-content: flex-start;
 				padding: 1.7em 1.7em 3.5em;
 				&::before {
-					display: none;
+					display: none !important;
 				}
 				&-img {
 					border: 0.1875em solid $green;
